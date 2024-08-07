@@ -11,6 +11,7 @@ const LoginScreen = () => {
 
   const handleLogin = () => {
     // Add your login logic heresssss
+    //Naveen test commit
 console.log(inputValues,"values");  };
 
   const onhandlechange = (name,value)=>{
