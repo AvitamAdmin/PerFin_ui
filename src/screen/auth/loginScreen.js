@@ -1,8 +1,12 @@
+import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, Alert, Pressable } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
 const LoginScreen = () => {
+
+ const navigation = useNavigation();
+
   const [inputValues, setinputValues] = useState({
     usename:"",
     password:""
@@ -52,7 +56,7 @@ setinputValues({...inputValues,[name]:value})
         }}
       />
       </View>
-      <Pressable title="Login" onPress={handleLogin} ><Text style={{backgroundColor:"#cce6ff",paddingLeft:15,paddingRight:15,padding:5,fontSize:18,borderRadius:8}}>Login</Text></Pressable>
+      <Pressable title="Login" onPress={()=>navigation.navigate('BottomTabs')} ><Text style={{backgroundColor:"#cce6ff",paddingLeft:15,paddingRight:15,padding:5,fontSize:18,borderRadius:8}}>Login</Text></Pressable>
      </LinearGradient>
     </View>
   );
