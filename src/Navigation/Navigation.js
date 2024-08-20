@@ -11,6 +11,8 @@ import Transcations from '../screen/MoneyManagerTabs/Transcations';
 import Stats from '../screen/MoneyManagerTabs/Stats';
 import Accounts from '../screen/MoneyManagerTabs/Accounts';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
+import AddExpense from '../screen/MoneyManagerTabs/AddExpense';
+import AddNew from '../screen/MoneyManagerTabs/AddNew';
 
 function BottomTabs() {
   const Tab = createBottomTabNavigator();
@@ -159,6 +161,13 @@ function StackNavigator() {
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name="BottomTabs" component={BottomTabs} options={{ headerShown: false }} />
       <Stack.Screen name="MoneyManagerTabs" component={MoneyManagerTabs} options={{ headerShown: false }} />
+      <Stack.Screen name="AddExpense" component={AddExpense} options={{headerStyle:{
+        backgroundColor:"#1c274c"
+      },
+      headerTintColor:"#fff"}} />
+      <Stack.Screen name="AddNew" component={AddNew} options={{headerStyle:{
+        backgroundColor:"#1c274c"},headerTintColor:"#fff"}} />
+      
     </Stack.Navigator>
   );
 }

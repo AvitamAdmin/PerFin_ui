@@ -75,7 +75,8 @@ const Home = () => {
        <Text style={{color:"#fff",fontWeight:"bold",fontSize:hp(3)}}>ADS</Text>
    </LinearGradient>
    
-   <View>
+  <View style={{flexDirection:"column",gap:10}}>
+  <View>
     <Text style={{color:"#000",fontWeight:"bold",fontSize:hp(1.7)}}>All Services</Text>
    </View>
 
@@ -101,11 +102,11 @@ const Home = () => {
    </View>
    <View style={{flexDirection:"row",width:wp("85%"),display:"flex",justifyContent:"space-between"}}>
        <View style={{flexDirection:"column",gap:5,alignItems:"center"}}>
-          <Pressable>
+          <Pressable>  
           <Image source={require('../../../assets/MutualFunds.png')} style={{height:hp(6),width:wp(16),borderRadius:10}}/>
           </Pressable>
           <Text style={{color:"#000",fontSize:hp(1.2)}}>Money Manager</Text>
-       </View>
+       </View>    
        <View style={{flexDirection:"column",gap:5,alignItems:"center"}}>
           <Pressable>
           <Image source={require('../../../assets/CompundInterest.png')} style={{height:hp(6),width:wp(16),borderRadius:10}}/>
@@ -119,7 +120,9 @@ const Home = () => {
           <Text style={{color:"#000",fontSize:hp(1.2)}}>Crypto</Text>
        </View>
    </View>
+  </View>
 
+   <View style={{flexDirection:"column",gap:15}}>
    <View>
     <Text style={{color:"#000",fontWeight:"bold",fontSize:hp(1.7)}}>Quick Services</Text>
    </View>
@@ -145,6 +148,7 @@ const Home = () => {
    
    </View>
 
+   </View>
    </View>
 
 
