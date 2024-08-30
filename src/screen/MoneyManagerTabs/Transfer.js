@@ -2,7 +2,7 @@ import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-
+//test
 const Transfer = () => {
   return (
     <View style={{flexDirection:"column",width:wp("100%"),display:"flex",justifyContent:"center",alignItems:"center",flex:1}}>
