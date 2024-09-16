@@ -7,12 +7,12 @@ import Report from '../screen/BottomTabs/Report';
 import Settings from '../screen/BottomTabs/Settings';
 import Icon from 'react-native-vector-icons/Ionicons';
 import LoginScreen from '../screen/auth/LoginScreen';
-import Transcations from '../screen/MoneyManagerTabs/Transcations';
-import Stats from '../screen/MoneyManagerTabs/Stats';
+import Transcations from '../screen/MoneyManagerTabs/Transaction/Transcations';
+import Stats from '../screen/MoneyManagerTabs/Stats/Stats';
 import Accounts from '../screen/MoneyManagerTabs/Accounts';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
-import AddExpense from '../screen/MoneyManagerTabs/AddExpense';
-import AddNew from '../screen/MoneyManagerTabs/AddNew';
+import AddExpense from '../screen/MoneyManagerTabs/Transaction/AddExpense';
+import AddNew from '../screen/MoneyManagerTabs/Transaction/AddNew';
 
 function BottomTabs() {
   const Tab = createBottomTabNavigator();
@@ -104,26 +104,7 @@ function MoneyManagerTabs() {
       <Tab.Screen
         name="Stats"
         component={Stats}
-        options={({ navigation }) => ({
-          headerTitle: () => (
-            <Text style={styles.headerTitle}>Stats</Text>
-          ),
-          headerTitleAlign: 'center',
-          headerLeft: () => (
-            <TouchableOpacity onPress={() => navigation.goBack()}>
-              <Icon name="arrow-back-outline" size={25} color="#fff" style={styles.headerIcon} />
-              </TouchableOpacity>
-          ),
-          headerRight: () => (
-            <TouchableOpacity onPress={() => console.log('Calendar icon pressed')}>
-              <Icon name="calendar-outline" size={25} color="#fff" style={styles.headerIcon} />
-              </TouchableOpacity>
-          ),
-          headerStyle: {
-            backgroundColor: '#3b53bd', // Set your app bar background color here
-          },
-          headerTintColor: '#fff', // Set the color of the header title and icons
-        })}
+        options={{headerShown: false}}
       />
     <Tab.Screen
         name="Accounts"
@@ -161,12 +142,8 @@ function StackNavigator() {
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
       <Stack.Screen name="BottomTabs" component={BottomTabs} options={{ headerShown: false }} />
       <Stack.Screen name="MoneyManagerTabs" component={MoneyManagerTabs} options={{ headerShown: false }} />
-      <Stack.Screen name="AddExpense" component={AddExpense} options={{headerStyle:{
-        backgroundColor:"#1c274c"
-      },
-      headerTintColor:"#fff"}} />
-      <Stack.Screen name="AddNew" component={AddNew} options={{headerStyle:{
-        backgroundColor:"#1c274c"},headerTintColor:"#fff"}} />
+      <Stack.Screen name="AddExpense" component={AddExpense}options={{ headerShown: false }}  />
+      <Stack.Screen name="AddNew" component={AddNew}options={{ headerShown: false }} />
       
     </Stack.Navigator>
   );

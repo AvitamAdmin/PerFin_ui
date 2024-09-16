@@ -5,11 +5,12 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import { useSport } from "../../SportContext";
+import { useSport } from "../../../SportContext";
 
 
 const SwitchMain = () => {
-  const { setToggle,Toggle } = useSport();
+  const { setToggle,Toggle,setTransactionHeading} = useSport();
+
   // const [Toggle, setToggle] = useState()
 
 
@@ -20,13 +21,16 @@ const SwitchMain = () => {
    
     const Expense = () =>{
       setToggle(1);
+      setTransactionHeading('Add Expense');
      
     }
     const Income = () =>{
       setToggle(2);
+      setTransactionHeading('Add Income');
     }
     const Transfer = () =>{
       setToggle(3);
+      setTransactionHeading('Add Transfer');
     }
 
    
@@ -61,7 +65,7 @@ const SwitchMain = () => {
               style={{
                 color: getSelectionMode == 1 ? "white" : "#000",
                 fontWeight:"bold",
-                fontSize:hp(2)
+                fontSize:hp(1.7)
               }}
             >
               Expense
@@ -83,7 +87,7 @@ const SwitchMain = () => {
               style={{
                 color: getSelectionMode == 2 ? "#fff" : "#000",
                 fontWeight:"bold",
-                fontSize:hp(2)
+                fontSize:hp(1.7)
               }}
             >
               Income
@@ -105,7 +109,7 @@ const SwitchMain = () => {
               style={{
                 color: getSelectionMode == 3 ? "white" : "#000",
                 fontWeight:"bold",
-                fontSize:hp(2)
+                fontSize:hp(1.7)
               }}
             >
               Transfer

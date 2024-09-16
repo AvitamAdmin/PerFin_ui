@@ -7,6 +7,7 @@ const SportContext = createContext();
 export const SportProvider = ({ children }) => {
   const [AddNew,setAddNew] = useState('expense')
   const [Toggle, setToggle] = useState(1);
+  const [TransactionHeading, setTransactionHeading] = useState('Add Expense')
 
   return (
     <SportContext.Provider
@@ -14,7 +15,9 @@ export const SportProvider = ({ children }) => {
          AddNew,
          setAddNew,
          Toggle,
-         setToggle
+         setToggle,
+         TransactionHeading,
+         setTransactionHeading
       }}
     >
       {children}

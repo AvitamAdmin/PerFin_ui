@@ -105,19 +105,19 @@ const Home = () => {
           <Pressable>  
           <Image source={require('../../../assets/MutualFunds.png')} style={{height:hp(6),width:wp(16),borderRadius:10}}/>
           </Pressable>
-          <Text style={{color:"#000",fontSize:hp(1.2)}}>Money Manager</Text>
+          <Text style={{color:"#000",fontSize:hp(1.2)}}>Mutual Funds</Text>
        </View>    
        <View style={{flexDirection:"column",gap:5,alignItems:"center"}}>
           <Pressable>
           <Image source={require('../../../assets/CompundInterest.png')} style={{height:hp(6),width:wp(16),borderRadius:10}}/>
           </Pressable>
-          <Text style={{color:"#000",fontSize:hp(1.2)}}>Stock Market</Text>
+          <Text style={{color:"#000",fontSize:hp(1.2)}}>Commodities </Text>
        </View>
        <View style={{flexDirection:"column",gap:5,alignItems:"center"}}>
           <Pressable>
           <Image source={require('../../../assets/Commodities.png')} style={{height:hp(6),width:wp(16),borderRadius:10}}/>
           </Pressable>
-          <Text style={{color:"#000",fontSize:hp(1.2)}}>Crypto</Text>
+          <Text style={{color:"#000",fontSize:hp(1.2)}}>Compound Interest</Text>
        </View>
    </View>
   </View>
