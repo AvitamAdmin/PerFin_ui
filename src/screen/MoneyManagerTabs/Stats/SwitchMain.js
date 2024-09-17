@@ -22,6 +22,7 @@ const SwitchMain = () => {
     const Expense = () =>{
       setToggle(1);
       setTransactionHeading('Add Expense');
+      
      
     }
     const Income = () =>{

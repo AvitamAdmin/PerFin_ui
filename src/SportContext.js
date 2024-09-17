@@ -8,6 +8,7 @@ export const SportProvider = ({ children }) => {
   const [AddNew,setAddNew] = useState('expense')
   const [Toggle, setToggle] = useState(1);
   const [TransactionHeading, setTransactionHeading] = useState('Add Expense')
+  const [StatDisplay,setStatDisplay]=useState('Monthly');
 
   return (
     <SportContext.Provider
@@ -17,7 +18,10 @@ export const SportProvider = ({ children }) => {
          Toggle,
          setToggle,
          TransactionHeading,
-         setTransactionHeading
+         setTransactionHeading,
+         StatDisplay,
+         setStatDisplay
+
       }}
     >
       {children}
